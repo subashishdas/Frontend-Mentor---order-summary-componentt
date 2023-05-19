@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  /* COLORS */
+
+  /* PRIMARY COLORS */
+
+  --clr-primary-pale-blue: hsl(225, 100%, 94%);
+  --clr-primary-bright-blue: hsl(245, 75%, 52%);
+
+  /* NEUTRAL COLORS */
+
+  --clr-neutral-blue-100: hsl(225, 100%, 98%);
+  --clr-neutral-blue-300: hsl(224, 23%, 55%);
+  --clr-neutral-blue-800: hsl(223, 47%, 23%);
+
+  /* FONTS */
+
+  --ff-main: "Red Hat Display", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(images/pattern-background-mobile.svg),
+    var(--clr-primary-pale-blue);
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: var(--ff-main);
+}
+
+.container {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 28rem;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+  box-shadow: 0 15px 25px 0 hsla(245, 75%, 52%, 0.11);
+}
+.img-box img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.imgbox-details {
+  text-align: center;
+}
+.title {
+  color: var(--clr-neutral-blue-800);
+  font-size: 1.4rem;
+  font-weight: 900;
+  padding: 1.3em 0 0.8em 0;
+}
+.text {
+  color: var(--clr-neutral-blue-300);
+  line-height: 1.6;
+  font-size: 16px;
+  padding: 0 2.1em 1.4em 2.1em;
+}
+
+.box {
+  background: var(--clr-neutral-blue-100);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 1.5em 1.5em 1.5em;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.box-left {
+  display: flex;
+}
+.box-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.2em;
+  padding-left: 1.2em;
+  text-align: left;
+  font-size: 0.9em;
+}
+.box-details p {
+  color: var(--clr-neutral-blue-300);
+  font-size: 0.8em;
+}
+.box-right a {
+  color: var(--clr-primary-bright-blue);
+  font-weight: 700;
+  font-size: 0.8rem;
+  opacity: 1;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.box-right a:hover {
+  opacity: 0.8;
+}
+
+.btn-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 0.65em;
+  margin-bottom: 1.5em;
+}
+.btn {
+  all: unset;
+  display: block;
+  border-radius: 10px;
+  cursor: pointer;
+  font: 16px;
+  font-weight: 700;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+  padding: 1em;
+}
+.payment-btn {
+  background: var(--clr-primary-bright-blue);
+  color: #fff;
+  box-shadow: 0 15px 20px 0 hsla(245, 75%, 52%, 0.25);
+  opacity: 1;
+  transition: 0.2s all ease;
+}
+.payment-btn:hover {
+  opacity: 0.8;
+}
+.cancel-btn {
+  color: var(--clr-neutral-blue-300);
+  transition: color 0.2s ease;
+}
+
+.cancel-btn:hover {
+  color: var(--clr-neutral-blue-800);
+}
+
+@media (min-width: 450px) {
+  body {
+    background: url(images/pattern-background-desktop.svg),
+      var(--clr-primary-pale-blue);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .title {
+    font-size: 1.7rem;
+    padding-top: 1.7em;
+    padding-bottom: 0.7em;
+  }
+
+  .text {
+    font-size: 1.05rem;
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+  .box {
+    margin: 0 3em 2em 3em;
+    padding: 1.5em;
+  }
+  .box-details h3 {
+    font-size: 1.05em;
+  }
+  .box-details p {
+    font-size: 0.9rem;
+  }
+  .btn {
+    margin-left: 3em;
+    margin-right: 3em;
+  }
+}
